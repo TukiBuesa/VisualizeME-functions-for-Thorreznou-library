@@ -11,6 +11,7 @@ from IPython.display import display
 def visualizeME_and_describe_violinbox(dataframe, categ_var, numeric_var, palette= 'tab10', save= True):
     '''
     Function that allows to obtain a more complete graph by merging boxplot and violinplot together with a table of descriptive metrics
+    It is high recommendable! to use this type of graph for a categoric variable with 20 unique values maximum.
     ### Parameters (5):
         * dataframe: `dataframe`  origin table
         * categ_var: `str` categoric variable

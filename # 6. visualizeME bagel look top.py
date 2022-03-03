@@ -1,5 +1,14 @@
 # 6. visualizeME bagel look top
 
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+from scipy.stats import iqr
+from IPython.display import display
+import os
+
 def visualizeME_bagel_look_top(dataframe, categ_var, top=0, cmap = 'tab10', circle=True, save=True):
     '''
     Function to generate a bagel graphic where you can select the top categories you want to see, or everyone by default

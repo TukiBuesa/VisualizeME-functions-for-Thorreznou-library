@@ -1,19 +1,22 @@
 #FUNCION 7 VisualizeME and describe SPIDEY
 def visualizeME_and_describe_Spidey(dataframe, save= True):
     '''
-    This function  generate a polar chart with your numeric variables in order to compare their means. Important!! first scale your numeric variables.
+    ## IMPORTANT: This function its just for SCALED dataframe (just numeric variables).
+    ## If you don't have scaled your variables, please first do it!!!
+    This function  generate a polar chart with your numeric 
+    variables in order to compare their means.
     ### Parameters (2):
         * dataframe: `dataframe` origin table
         * save: `bool` by default is True in order to save your graph, but if you prefer don't save it, just choose 'False'
     '''
-    spidey = pd.DataFrame(dataframe.iloc[:,0:-1].mean(), columns=['Means'])
+    spidey = pd.DataFrame(dataframe.mean(), columns=['Means'])
 
-    categories=list(dataframe.iloc[:,0:-1].columns)
+    categories=list(dataframe.columns)
     categories+=categories[:1]
     num =len(categories)
 
     # variables means
-    value=list(dataframe.iloc[:,0:-1].mean())
+    value=list(dataframe.mean())
     value+=value[:1]
 
     loc_label = np.linspace(start=0, stop=2*np.pi, num= num)
