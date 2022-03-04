@@ -65,3 +65,4 @@ def visualizeME_bagel_look_top(dataframe, categ_var, top=0, cmap = 'tab10', circ
     
     plt.show()
     return display(values_bagel)
+    

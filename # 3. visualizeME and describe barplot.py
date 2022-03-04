@@ -57,3 +57,4 @@ def visualizeME_and_describe_barplot(dataframe, categ_var, numeric_var, palette=
     
     plt.show()
     display(table)
+    

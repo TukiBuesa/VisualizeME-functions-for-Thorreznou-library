@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 
 def visualizeME_palettes_or_colors(selection = 'palettes', quantity_colors= 8):
     '''
-    Function that returns the possible color palettes of the Seaborn library
+    Function for consulting the colors and palettes available of the Seaborn library
     ### Parameters (2):
         * selection: `str` by default gives 'palettes', but you can choose 'colors'
         * quantity_colors: `int` by default it returns 8 colors per palette, you can change number of colors you will need. And if you want to see colors, it is not neccesary this parameter.
     ### Return (1):
         * plt.show(): available palettes/ colors with their respective names
     '''
-    colors = pd.read_csv('data/seaborn_color_list.csv')
+    colors = pd.read_csv('data/viz/seaborn_color_list.csv')
 
     if selection == 'palettes':
         grid = np.vstack((np.linspace(0, 1, quantity_colors), np.linspace(0, 1, quantity_colors)))

@@ -28,15 +28,15 @@ def visualizeME_FigureWords(dataframe, categ_var, shape= 'seahorse', cmap= 'tab1
     while shape not in ['dino', 'heart', 'star', 'seahorse', 'hashtag']:    
         shape = input('Try again, what shape do you want for your figure words graph?\n*Dino\n*Heart\n*Star\n*Seahorse: ').lower()
     if shape == 'seahorse':
-        figure = 'data/seahorse_visualizeME.jpg'
+        figure = 'data/viz/seahorse_visualizeME.jpg'
     elif shape == 'dino':
-        figure = 'data/dino_steg_visualizeME.jpg'
+        figure = 'data/viz/dino_steg_visualizeME.jpg'
     elif shape == 'heart': 
-        figure = 'data/corazon_visualizeME.png'
+        figure = 'data/viz/corazon_visualizeME.png'
     elif shape == 'star':
-        figure = 'data/estrella-silueta_visualizeME.png'  
+        figure = 'data/viz/estrella-silueta_visualizeME.png'  
     elif shape == 'hashtag':
-        figure = 'data/hashtag-silueta_visualizeME.png'
+        figure = 'data/viz/hashtag-silueta_visualizeME.png'
     
     # Words
     words = ' '.join(map(str, dataframe[categ_var]))
@@ -62,3 +62,4 @@ def visualizeME_FigureWords(dataframe, categ_var, shape= 'seahorse', cmap= 'tab1
         plt.savefig(name)
     
     return plt.show()
+    
